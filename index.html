@@ -3,262 +3,207 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu Saldo Real</title>
+  <title>Meu Saldo Real — Organize seu dinheiro</title>
 
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      color: #fff;
     }
 
     .container {
-      max-width: 480px;
+      max-width: 520px;
       margin: auto;
-      padding: 28px 18px;
-    }
-
-    .card {
       background: #ffffff;
-      color: #222;
-      border-radius: 18px;
-      padding: 26px;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.35);
+      color: #333;
+      padding: 25px;
+      border-radius: 12px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
     }
 
     h1 {
       font-size: 26px;
+      color: #111;
       text-align: center;
-      margin-bottom: 10px;
-      color: #0f2027;
-      line-height: 1.2;
-    }
-
-    .subheadline {
-      text-align: center;
-      font-size: 15px;
-      color: #555;
-      margin-bottom: 18px;
-    }
-
-    .badge {
-      background: #e8f0ff;
-      color: #1a2a4f;
-      text-align: center;
-      padding: 8px;
-      border-radius: 10px;
-      font-size: 13px;
-      margin-bottom: 18px;
-      font-weight: bold;
-    }
-
-    button {
-      width: 100%;
-      padding: 16px;
-      background: linear-gradient(135deg, #00c853, #00a84f);
-      border: none;
-      border-radius: 14px;
-      color: #ffffff;
-      font-size: 17px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-      margin: 14px 0;
-    }
-
-    button:hover {
-      transform: scale(1.03);
     }
 
     h2 {
       font-size: 18px;
-      margin-top: 26px;
-      color: #203a43;
+      margin-top: 25px;
+      color: #111;
     }
 
     p {
       font-size: 15px;
       line-height: 1.6;
-      margin-top: 10px;
     }
 
-    ul {
-      padding-left: 18px;
-      margin-top: 12px;
+    .highlight {
+      color: #0b63ff;
+      font-weight: bold;
     }
 
-    ul li {
-      margin-bottom: 9px;
+    label {
+      font-weight: bold;
+      margin-top: 15px;
+      display: block;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
       font-size: 15px;
     }
 
-    .box {
-      background: #f1f5f9;
-      padding: 16px;
-      border-radius: 12px;
+    button {
+      width: 100%;
+      padding: 15px;
+      background: linear-gradient(90deg, #0b63ff, #00c6ff);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
       margin-top: 20px;
-      font-size: 15px;
-      color: #222;
+    }
+
+    button:hover {
+      opacity: 0.95;
+    }
+
+    .resultado {
+      margin-top: 20px;
+      background: #f2f6ff;
+      padding: 15px;
+      border-radius: 8px;
+      color: #111;
+    }
+
+    .alerta {
+      margin-top: 10px;
+      color: #c0392b;
+      font-weight: bold;
     }
 
     .proof {
-      background: #e8f0ff;
+      background: #eef3ff;
+      border-left: 5px solid #0b63ff;
       padding: 15px;
-      border-radius: 12px;
-      margin-top: 20px;
-      font-size: 14px;
-      color: #1a2a4f;
-    }
-
-    .testimonials {
-      margin-top: 20px;
-    }
-
-    .testimonial {
-      background: #fafafa;
-      border-left: 4px solid #00c853;
-      padding: 12px;
-      margin-bottom: 12px;
-      font-size: 14px;
-      color: #333;
+      margin-top: 25px;
       border-radius: 8px;
     }
 
-    .price {
+    .cta {
       text-align: center;
-      font-size: 24px;
-      margin: 26px 0 6px;
-      color: #0f2027;
-      font-weight: bold;
+      margin-top: 30px;
     }
 
-    .urgency {
-      text-align: center;
-      font-size: 14px;
-      color: #c0392b;
-      font-weight: bold;
-      margin-bottom: 14px;
+    .cta p {
+      font-size: 16px;
+      margin-bottom: 10px;
     }
 
-    .guarantee {
-      text-align: center;
+    .secure {
       font-size: 13px;
-      color: #666;
-      margin-top: 12px;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 12px;
-      color: #ddd;
-      margin-top: 28px;
+      color: #555;
+      margin-top: 10px;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <div class="card">
 
-      <!-- REDLINE -->
-      <h1>
-        Pare de chegar no fim do mês sem dinheiro<br>
-        em menos de 5 minutos
-      </h1>
+<div class="container">
 
-      <!-- SUBREDLINE -->
-      <div class="subheadline">
-        Descubra exatamente quanto você pode gastar e quanto deve guardar,
-        mesmo que hoje nunca sobre nada.
-      </div>
+  <h1>Descubra quanto dinheiro realmente sobra no seu mês</h1>
 
-      <div class="badge">
-        🔥 Método simples • Sem planilhas • 100% no celular
-      </div>
+  <p style="text-align:center;">
+    Não é falta de dinheiro.<br>
+    <span class="highlight">É falta de método.</span>
+  </p>
 
-      <!-- CTA TOPO -->
-      <button onclick="window.location.href='SEU_LINK_DE_CHECKOUT_AQUI'">
-        QUERO ORGANIZAR MEU DINHEIRO AGORA
-      </button>
+  <h2>Simulador rápido</h2>
 
-      <!-- DOR -->
-      <h2>📉 Isso parece com você?</h2>
-      <ul>
-        <li>O dinheiro acaba antes do mês terminar</li>
-        <li>Você não sabe para onde seu dinheiro vai</li>
-        <li>Tenta se organizar, mas nunca consegue manter</li>
-        <li>Vive no aperto mesmo trabalhando todo mês</li>
-      </ul>
+  <label>Quanto você ganha por mês?</label>
+  <input type="number" id="renda" placeholder="Ex: 2500">
 
-      <div class="box">
-        ⚠️ O problema não é quanto você ganha.<br>
-        É não saber exatamente quanto pode gastar.
-      </div>
+  <label>Quanto são seus gastos fixos?</label>
+  <input type="number" id="fixos" placeholder="Aluguel, contas, etc">
 
-      <!-- SOLUÇÃO -->
-      <h2>💡 O que é o Meu Saldo Real</h2>
-      <p>
-        Um método prático que mostra, em poucos minutos,
-        quanto você pode gastar no mês e quanto deve guardar,
-        sem planilhas, sem contas difíceis e sem complicação.
-      </p>
+  <label>Quanto você quer guardar?</label>
+  <select id="percentual">
+    <option value="0.05">5%</option>
+    <option value="0.10">10%</option>
+    <option value="0.15">15%</option>
+  </select>
 
-      <!-- BENEFÍCIOS -->
-      <h2>✅ O que você vai conseguir</h2>
-      <ul>
-        <li>✔️ Saber seu limite real de gastos</li>
-        <li>✔️ Começar a guardar dinheiro já no primeiro mês</li>
-        <li>✔️ Parar de se endividar</li>
-        <li>✔️ Ter controle sem estresse</li>
-      </ul>
+  <button onclick="calcular()">Calcular agora</button>
 
-      <!-- PROVAS SOCIAIS -->
-      <div class="testimonials">
-        <h2>🗣️ Pessoas comuns, resultados reais</h2>
+  <div class="resultado" id="resultado" style="display:none;"></div>
+  <div class="alerta" id="alerta"></div>
 
-        <div class="testimonial">
-          “Nunca consegui me organizar. Em 10 minutos já sabia exatamente
-          quanto podia gastar por semana.” – Carlos M.
-        </div>
-
-        <div class="testimonial">
-          “Simples demais. Finalmente parei de gastar sem controle.” – Ana R.
-        </div>
-
-        <div class="testimonial">
-          “Achei que ganhava pouco, mas o problema era falta de método.” – João P.
-        </div>
-      </div>
-
-      <div class="proof">
-        📊 Métodos simples de controle financeiro são os que mais funcionam
-        para quem nunca conseguiu seguir planilhas complicadas.
-      </div>
-
-      <!-- PREÇO -->
-      <div class="price">
-        Apenas R$ 19,90
-      </div>
-
-      <div class="urgency">
-        ⚠️ Oferta de lançamento • Pode sair do ar a qualquer momento
-      </div>
-
-      <!-- CTA FINAL -->
-      <button onclick="window.location.href='SEU_LINK_DE_CHECKOUT_AQUI'">
-        SIM, QUERO ACESSAR AGORA
-      </button>
-
-      <div class="guarantee">
-        🔒 Pagamento 100% seguro • Garantia incondicional de 7 dias
-      </div>
-
-    </div>
-
-    <footer>
-      © 2025 • Meu Saldo Real
-    </footer>
+  <div class="proof">
+    <strong>📌 Pessoas comuns estão usando:</strong>
+    <p>
+      “Finalmente consegui entender meu dinheiro sem planilhas complicadas.”<br>
+      “Em 1 semana já parei de gastar no impulso.”<br>
+      “Simples, direto e funciona.”
+    </p>
   </div>
+
+  <div class="cta">
+    <p><strong>Tenha acesso completo agora</strong></p>
+
+    <a href="https://sl1nk.com/meusaldoreal2026" target="_blank">
+      <button>Quero organizar meu dinheiro agora</button>
+    </a>
+
+    <p class="secure">
+      🔒 Acesso imediato • Garantia de 7 dias • Pagamento seguro
+    </p>
+  </div>
+
+</div>
+
+<script>
+function calcular() {
+  const renda = parseFloat(document.getElementById("renda").value);
+  const fixos = parseFloat(document.getElementById("fixos").value);
+  const percentual = parseFloat(document.getElementById("percentual").value);
+
+  if (!renda || !fixos) {
+    alert("Preencha todos os campos");
+    return;
+  }
+
+  const guardar = renda * percentual;
+  const disponivel = renda - fixos - guardar;
+  const semanal = disponivel / 4;
+
+  let alerta = "";
+  if (fixos > renda * 0.7) {
+    alerta = "⚠ Seus gastos fixos estão muito altos. Atenção.";
+  }
+
+  document.getElementById("resultado").style.display = "block";
+  document.getElementById("resultado").innerHTML = `
+    <p><strong>Você deve guardar:</strong> R$ ${guardar.toFixed(2)}</p>
+    <p><strong>Você pode gastar no mês:</strong> R$ ${disponivel.toFixed(2)}</p>
+    <p><strong>Máximo por semana:</strong> R$ ${semanal.toFixed(2)}</p>
+  `;
+
+  document.getElementById("alerta").innerText = alerta;
+}
+</script>
+
 </body>
 </html>
