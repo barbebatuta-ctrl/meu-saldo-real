@@ -22,15 +22,15 @@
     .card {
       background: #ffffff;
       color: #222;
-      border-radius: 16px;
-      padding: 25px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      border-radius: 18px;
+      padding: 26px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.35);
     }
 
     h1 {
       font-size: 26px;
       text-align: center;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       color: #0f2027;
     }
 
@@ -38,12 +38,33 @@
       text-align: center;
       font-size: 15px;
       color: #555;
-      margin-bottom: 25px;
+      margin-bottom: 22px;
+    }
+
+    .cta-top {
+      margin: 20px 0;
+    }
+
+    button {
+      width: 100%;
+      padding: 16px;
+      background: linear-gradient(135deg, #00c853, #00a84f);
+      border: none;
+      border-radius: 14px;
+      color: #ffffff;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    button:hover {
+      transform: scale(1.03);
     }
 
     h2 {
       font-size: 18px;
-      margin-top: 25px;
+      margin-top: 28px;
       color: #203a43;
     }
 
@@ -55,45 +76,45 @@
 
     ul {
       padding-left: 18px;
-      margin-top: 10px;
+      margin-top: 12px;
     }
 
     ul li {
-      margin-bottom: 8px;
+      margin-bottom: 9px;
       font-size: 15px;
     }
 
     .highlight {
       background: #f1f5f9;
-      padding: 15px;
-      border-radius: 10px;
+      padding: 16px;
+      border-radius: 12px;
       margin-top: 20px;
       font-size: 15px;
     }
 
+    .proof {
+      background: #e8f0ff;
+      padding: 15px;
+      border-radius: 12px;
+      margin-top: 22px;
+      font-size: 14px;
+      color: #1a2a4f;
+    }
+
     .price {
       text-align: center;
-      font-size: 22px;
-      margin: 25px 0 10px;
+      font-size: 24px;
+      margin: 28px 0 8px;
       color: #0f2027;
       font-weight: bold;
     }
 
-    button {
-      width: 100%;
-      padding: 16px;
-      background: linear-gradient(135deg, #00c853, #00a84f);
-      border: none;
-      border-radius: 12px;
-      color: #ffffff;
-      font-size: 17px;
+    .urgency {
+      text-align: center;
+      font-size: 14px;
+      color: #c0392b;
       font-weight: bold;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-
-    button:hover {
-      transform: scale(1.03);
+      margin-bottom: 16px;
     }
 
     .guarantee {
@@ -116,47 +137,75 @@
   <div class="container">
     <div class="card">
 
-      <h1>Meu Saldo Real</h1>
+      <!-- HEADLINE -->
+      <h1>
+        Descubra quanto você REALMENTE pode gastar  
+        <br>e quanto DEVE guardar — sem planilhas
+      </h1>
+
       <div class="subtitle">
-        Controle seu dinheiro sem planilhas, sem complicação e direto no celular
+        Mesmo que você ganhe pouco, se perca no meio do mês ou odeie controles complicados.
       </div>
 
-      <h2>📌 O que é?</h2>
+      <!-- CTA TOPO -->
+      <div class="cta-top">
+        <button onclick="window.location.href='LINK_DA_KIWIFY_AQUI'">
+          QUERO DESCOBRIR MEU SALDO REAL
+        </button>
+      </div>
+
+      <!-- O QUE É -->
+      <h2>📌 O que é o Meu Saldo Real?</h2>
       <p>
-        O <strong>Meu Saldo Real</strong> é um método simples para você organizar sua vida financeira,
-        guardar dinheiro e finalmente saber para onde seu dinheiro está indo.
+        Um método simples e direto para você entender seu dinheiro de verdade,
+        saber exatamente quanto pode gastar e finalmente começar a guardar dinheiro
+        — tudo em poucos minutos e direto no celular.
       </p>
 
-      <h2>💡 O que você vai aprender</h2>
+      <!-- BENEFÍCIOS -->
+      <h2>💡 O que você vai conseguir</h2>
       <ul>
-        <li>✔️ O método 3 contas para guardar dinheiro</li>
-        <li>✔️ Como organizar gastos sem planilha</li>
-        <li>✔️ Controle financeiro direto no celular</li>
-        <li>✔️ Como sobrar dinheiro todo mês</li>
+        <li>✔️ Saber quanto pode gastar sem entrar no vermelho</li>
+        <li>✔️ Definir quanto guardar todo mês automaticamente</li>
+        <li>✔️ Organizar sua vida financeira sem planilhas</li>
+        <li>✔️ Parar de chegar no fim do mês no aperto</li>
       </ul>
 
       <div class="highlight">
-        👉 Ideal para quem ganha pouco ou muito, mas nunca consegue guardar dinheiro.
+        👉 Ideal para quem sempre tentou se organizar, mas nunca conseguiu manter.
       </div>
 
-      <h2>🎯 Para quem é?</h2>
+      <!-- PROVA -->
+      <div class="proof">
+        📊 Pessoas que aplicam métodos simples de controle financeiro
+        conseguem sobrar dinheiro já no primeiro mês.
+      </div>
+
+      <!-- PARA QUEM -->
+      <h2>🎯 Para quem é</h2>
       <ul>
-        <li>Quem vive no aperto todo mês</li>
-        <li>Quem não consegue guardar dinheiro</li>
-        <li>Quem odeia planilhas complicadas</li>
-        <li>Quem quer praticidade</li>
+        <li>Quem nunca sabe para onde o dinheiro vai</li>
+        <li>Quem vive no limite todo mês</li>
+        <li>Quem quer algo simples e prático</li>
+        <li>Quem quer começar hoje</li>
       </ul>
 
+      <!-- PREÇO -->
       <div class="price">
         Acesso imediato por apenas R$ 19,90
       </div>
 
-      <button onclick="alert('Link de pagamento será adicionado aqui')">
-        QUERO ACESSAR AGORA
+      <div class="urgency">
+        ⚠️ Preço promocional de lançamento — pode sair do ar a qualquer momento
+      </div>
+
+      <!-- CTA FINAL -->
+      <button onclick="window.location.href='LINK_DA_KIWIFY_AQUI'">
+        SIM, QUERO ACESSAR AGORA
       </button>
 
       <div class="guarantee">
-        🔒 Pagamento seguro • Acesso imediato
+        🔒 Pagamento 100% seguro • Garantia de 7 dias
       </div>
 
     </div>
