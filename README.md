@@ -1,97 +1,70 @@
-🚀 Boas-vindas: Meu Saldo Real
+# 📱 Meu Saldo Real: O Sistema de Liberdade Financeira
 
-Parabéns! Você acaba de dar o passo mais inteligente para sua liberdade financeira.
-
-A partir de agora, você faz parte do grupo que decidiu abandonar a ansiedade das planilhas complexas em favor da clareza total. O Meu Saldo Real não é apenas um conjunto de arquivos; é o seu novo GPS financeiro.
-
-O que você encontra aqui:
-
-Seu Mapa da Paz: O guia prático para dominar seu dinheiro em minutos.
-
-Sua Calculadora de Rota: O arquivo CSV pronto para uso imediato.
-
-Seu Histórico de Evolução: O método para ver seu patrimônio crescer mês a mês.
-
-Como começar: Leia o arquivo README.md abaixo. Ele contém o passo a passo exato para você descobrir seu Saldo Real ainda hoje. Lembre-se: o controle financeiro não deve ser um esforço, deve ser uma constância.
-
-Sua jornada de clareza começa agora! 📱 Meu Saldo Real: Seu Navegador Financeiro
-
-> **"Saiba exatamente quanto pode gastar, guardar e evoluir — sem planilhas e direto do celular."**
-
-Este é o seu guia prático para assumir o controle da sua vida financeira em menos de 5 minutos por mês. Esqueça termos técnicos; aqui trabalhamos com a **Paz Real**.
+> **Promessa:** Você vai saber exatamente quanto pode gastar, guardar e evoluir todos os meses — sem planilhas, sem complicação e direto do celular.
 
 ---
 
-## 🗺️ O Mapa do Sucesso (Resumo do Método)
+## 🏁 Por onde começar? (Sua primeira vitória em 5 min)
 
-| Frequência | Ação | Objetivo |
+Para cumprir a promessa de clareza financeira, você não vai preencher tabelas infinitas. Você vai definir o seu **Nível de Paz**.
+
+### 1️⃣ O Cálculo do Saldo Real
+Faça essa conta agora mesmo no seu celular:
+1. **Renda Total** (Quanto entra)
+2. **(-) Custos Fixos** (Aluguel, luz, internet, boletos)
+3. **(-) Sua Evolução** (O valor que você SE paga primeiro para guardar)
+
+**O resultado é o seu SALDO REAL.** Esse é o dinheiro que você pode gastar sem culpa.
+
+---
+
+## 📲 O Seu "App" de Gestão Diária
+Esqueça planilhas. Para atualizar seus gastos diariamente de forma simples:
+
+1. **Crie um grupo no WhatsApp** apenas com você (ou use o Bloco de Notas).
+2. **Nomeie o grupo:** `💰 Meu Saldo Real`.
+3. **Fixe o grupo no topo.**
+4. **Como usar:** No início da semana, digite seu limite (Ex: `Limite: R$ 500`). A cada gasto, apenas mande uma mensagem subtraindo. 
+   *Ex: Gastou 50? Digite: `450`. Gastou 20? Digite: `430`.*
+
+---
+
+## 📊 Relatório de Evolução (Curto, Médio e Longo Prazo)
+
+Para saber se você está evoluindo, acompanhe esses 3 marcos dentro deste sistema:
+
+### 🟢 Curto Prazo (Semanal)
+**Indicador:** O Saldo no WhatsApp nunca fica negativo.
+* *Resultado:* Fim da culpa e do medo de abrir o aplicativo do banco.
+
+### 🟡 Médio Prazo (Mensal)
+**Indicador:** O valor da "Sua Evolução" foi transferido no dia 01.
+* *Resultado:* Você vê o dinheiro sobrar mesmo ganhando pouco.
+
+### 🔴 Longo Prazo (Anual)
+**Indicador:** Seu "Tempo de Paz".
+* *Cálculo:* (Total Guardado) ÷ (Custos Fixos). 
+* *Resultado:* Saber exatamente quantos meses você pode viver sem trabalhar se quiser.
+
+---
+
+## 🏆 Os 3 Níveis da sua Evolução Financeira
+*Baseado no quanto você consegue guardar sem esforço:*
+
+| Nível | Status | Ação para Melhorar |
 | :--- | :--- | :--- |
-| **Mensal** | Definir o Saldo Real | Garantir que o futuro está pago |
-| **Semanal** | Olhar o Termômetro | Ajustar a rota sem estresse |
-| **Diário** | Abate Rápido | Saber quanto ainda tem no bolso |
+| **Nível 1** | Sobrevivente | Parar de chegar no fim do mês sem dinheiro. |
+| **Nível 2** | Adulto no Controle | Guardar dinheiro automaticamente todos os meses. |
+| **Nível 3** | Evolução Real | Ver sua reserva cobrir mais de 6 meses de vida. |
 
 ---
 
-## 🛠️ PASSO 1: O Check-in Mensal
-*Realize no dia que receber seu dinheiro.*
+## 🛠️ Suporte e Implementação
+Este produto foi desenhado para ser **auto-implementável**. 
+* **Sem termos técnicos:** Você não precisa saber o que é custo variável ou taxa Selic.
+* **Sem esforço:** A atualização leva menos de 5 segundos após cada gasto.
 
-Para descobrir o quanto você **realmente** pode gastar, use a fórmula abaixo:
-
-$$Saldo\ Real = Renda\ Total - (Custos\ Fixos + Meta\ de\ Evolução)$$
-
-1. **Renda Total:** Tudo que cai na conta.
-2. **Custos Fixos:** Boletos, aluguel, assinaturas (O que você "tem" que pagar).
-3. **Meta de Evolução:** O valor que você guarda para seus sonhos (mínimo de 5%).
-
-> **Exemplo:** Se você ganha R$ 3.000, tem R$ 1.800 de fixos e quer guardar R$ 200, seu **Saldo Real Mensal é R$ 1.000**.
+**Dica de Ouro:** Salve o link desta página no seu navegador do celular e clique em "Adicionar à tela de início". Pronto, você tem um web-app de consulta rápida sempre à mão.
 
 ---
-
-## 🚦 PASSO 2: O Termômetro Semanal
-Divida seu Saldo Real Mensal por 4. Este é o seu **Limite de Estilo de Vida**.
-
-* 🟢 **VERDE:** Você gastou menos que o limite semanal. (Pode comemorar!)
-* 🟡 **AMARELO:** Você atingiu o limite. (Segure os luxos até segunda-feira).
-* 🔴 **VERMELHO:** Você estourou. (Subtraia o excesso do saldo da próxima semana).
-
----
-
-## 📈 PASSO 3: Relatório de Evolução (Sua Escada)
-Acompanhe seu progresso real abaixo. A cada mês, preencha seu patrimônio acumulado.
-
-| Mês | Guardado no Mês | Total Acumulado | Status do Objetivo |
-| :--- | :--- | :--- | :--- |
-| Mês 1 | R$ ________ | R$ ________ | ⚪ |
-| Mês 2 | R$ ________ | R$ ________ | 🟢 |
-| Mês 3 | R$ ________ | R$ ________ | 🚀 |
-
----
-
-## 🎯 SEUS PRÓXIMOS PASSOS
-
-1.  **Crie seu primeiro Saldo Real:** Use a calculadora do seu celular agora.
-2.  **Crie um grupo no WhatsApp com você mesmo:** Nomeie como "Meu Saldo Real". Toda vez que gastar, apenas digite o valor e subtraia do seu limite semanal.
-3.  **Não se culpe:** Se um mês ficar no vermelho, ajuste o próximo. O importante é a **constância**, não a perfeição.
-
----
-
-## 🔐 A Promessa Meu Saldo Real
-* ✔ Fim da culpa por gastar.
-* ✔ Clareza em menos de 5 minutos.
-* ✔ Evolução patrimonial visível.
-* ✔ Segurança de adulto no controle.
-
----
-*Este é um produto digital de acesso exclusivo para clientes. A reprodução não autorizada é proibida.*
-## 📥 Baixe sua Calculadora Auxiliar
-
-Para facilitar ainda mais, você pode usar nossa calculadora em formato CSV:
-
-1. Clique no arquivo `calculadora-msr.csv` aqui no GitHub.
-2. Clique no botão **"Download raw file"** (ícone de baixar).
-3. Abra no Excel ou Google Sheets.
-
-**Como preencher:**
-* Insira seus valores na coluna **Valor (R$)**.
-* No campo **SALDO REAL MENSAL**, use a fórmula: `=B2-B3-B4`
-* No campo **SALDO REAL SEMANAL**, use a fórmula: `=B5/4`
+*© 2024 Meu Saldo Real - Sistema Exclusivo para Alunos Kiwify.*
