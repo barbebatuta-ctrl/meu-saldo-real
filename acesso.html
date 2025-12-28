@@ -1,204 +1,206 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Acesso – Meu Saldo Real</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meu Saldo Real – Acesso</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #ffffff;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f2027;
+  color: #222;
+}
 
-    .container {
-      max-width: 520px;
-      margin: auto;
-      padding: 28px 18px;
-    }
+.container {
+  max-width: 420px;
+  margin: auto;
+  padding: 24px 16px;
+}
 
-    .card {
-      background: #ffffff;
-      color: #222;
-      border-radius: 18px;
-      padding: 26px;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.35);
-    }
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
 
-    h1 {
-      font-size: 26px;
-      text-align: center;
-      color: #0f2027;
-      margin-bottom: 10px;
-    }
+h1 {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 6px;
+}
 
-    h2 {
-      font-size: 20px;
-      color: #203a43;
-      margin-top: 26px;
-    }
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
 
-    p {
-      font-size: 15px;
-      line-height: 1.6;
-      margin-top: 10px;
-    }
+label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 14px;
+  display: block;
+}
 
-    ul {
-      padding-left: 18px;
-      margin-top: 12px;
-    }
+input {
+  width: 100%;
+  padding: 14px;
+  margin-top: 6px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
 
-    ul li {
-      margin-bottom: 8px;
-      font-size: 15px;
-    }
+button {
+  width: 100%;
+  padding: 16px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg,#00c853,#00a84f);
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
 
-    .highlight {
-      background: #e8f0ff;
-      padding: 14px;
-      border-radius: 12px;
-      margin-top: 18px;
-      font-size: 15px;
-      color: #1a2a4f;
-    }
+.result {
+  margin-top: 20px;
+  display: none;
+}
 
-    .calc {
-      background: #f1f5f9;
-      padding: 16px;
-      border-radius: 12px;
-      margin-top: 18px;
-      color: #222;
-    }
+.box {
+  background: #f1f5f9;
+  padding: 14px;
+  border-radius: 12px;
+  margin-top: 14px;
+  font-size: 14px;
+}
 
-    input {
-      width: 100%;
-      padding: 10px;
-      margin-top: 8px;
-      margin-bottom: 12px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 15px;
-    }
+.highlight {
+  font-weight: bold;
+  color: #0f2027;
+}
 
-    button {
-      width: 100%;
-      padding: 14px;
-      background: linear-gradient(135deg, #00c853, #00a84f);
-      border: none;
-      border-radius: 12px;
-      color: #fff;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+.bar {
+  background: #e0e0e0;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 6px;
+}
 
-    .result {
-      margin-top: 14px;
-      font-size: 16px;
-      font-weight: bold;
-      text-align: center;
-      color: #0f2027;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 12px;
-      color: #ddd;
-      margin-top: 28px;
-    }
-  </style>
-
-  <script>
-    function calcularSaldo() {
-      const renda = Number(document.getElementById("renda").value);
-      const gastos = Number(document.getElementById("gastos").value);
-      const guardar = Number(document.getElementById("guardar").value);
-
-      const saldo = renda - gastos - guardar;
-
-      document.getElementById("resultado").innerText =
-        "Seu Saldo Real para gastar é: R$ " + saldo.toFixed(2);
-    }
-  </script>
+.bar span {
+  display: block;
+  height: 100%;
+  background: #00c853;
+}
+.small {
+  font-size: 13px;
+  color: #555;
+  margin-top: 6px;
+}
+footer {
+  text-align: center;
+  color: #ddd;
+  font-size: 12px;
+  margin-top: 20px;
+}
+</style>
 </head>
 
 <body>
-  <div class="container">
-    <div class="card">
+<div class="container">
+  <div class="card">
 
-      <h1>✅ Acesso Liberado</h1>
-      <p style="text-align:center;">
-        Bem-vindo ao <strong>Método Meu Saldo Real</strong>.<br>
-        Em poucos minutos você vai saber exatamente quanto pode gastar.
-      </p>
+    <h1>💰 Meu Saldo Real</h1>
+    <div class="subtitle">
+      Descubra quanto você consegue guardar<br>
+      sem complicação
+    </div>
 
-      <h2>🔹 PASSO 1 – Sua renda mensal</h2>
-      <p>
-        Some todo dinheiro que entra no mês:
-      </p>
-      <ul>
-        <li>Salário</li>
-        <li>Renda extra</li>
-        <li>Qualquer valor fixo</li>
-      </ul>
+    <label>Quanto você ganha por mês?</label>
+    <input type="number" id="ganho" placeholder="Ex: 2500">
 
-      <h2>🔹 PASSO 2 – Seus gastos essenciais</h2>
-      <p>
-        Liste apenas o que é obrigatório:
-      </p>
-      <ul>
-        <li>Aluguel / contas</li>
-        <li>Comida</li>
-        <li>Transporte</li>
-        <li>Dívidas (se houver)</li>
-      </ul>
+    <label>Quanto normalmente sobra no fim do mês?</label>
+    <input type="number" id="sobra" placeholder="Ex: 200">
 
-      <h2>🔹 PASSO 3 – Quanto você vai guardar</h2>
-      <p>
-        Mesmo que seja pouco. Guardar vem <strong>antes</strong> de gastar.
-      </p>
+    <button onclick="calcular()">VER MEU RESULTADO</button>
 
-      <div class="highlight">
-        💡 Fórmula do método:<br>
-        <strong>Saldo Real = Renda – Gastos – Valor Guardado</strong>
+    <div class="result" id="resultado">
+
+      <div class="box">
+        💡 <span class="highlight">Recomendação automática:</span><br>
+        Você consegue guardar cerca de  
+        <span class="highlight" id="guardar"></span> por mês
+        sem apertar sua rotina.
       </div>
 
-      <h2>📊 Calculadora Meu Saldo Real</h2>
-      <div class="calc">
-        <label>Renda mensal (R$)</label>
-        <input id="renda" type="number" placeholder="Ex: 2500">
-
-        <label>Gastos fixos (R$)</label>
-        <input id="gastos" type="number" placeholder="Ex: 1600">
-
-        <label>Valor para guardar (R$)</label>
-        <input id="guardar" type="number" placeholder="Ex: 300">
-
-        <button onclick="calcularSaldo()">CALCULAR MEU SALDO REAL</button>
-
-        <div class="result" id="resultado"></div>
+      <div class="box">
+        📅 Em quanto tempo você junta:
+        <ul>
+          <li>R$ 1.000 → <b id="t1"></b> meses</li>
+          <li>R$ 5.000 → <b id="t5"></b> meses</li>
+          <li>R$ 10.000 → <b id="t10"></b> meses</li>
+        </ul>
       </div>
 
-      <h2>📅 Como usar no dia a dia</h2>
-      <ul>
-        <li>Divida seu saldo por 4 → gasto semanal</li>
-        <li>Evite gastar tudo em poucos dias</li>
-        <li>Se estourar um dia, compense no próximo</li>
-      </ul>
+      <div class="box">
+        📊 Evolução da sua economia
+        <div class="bar"><span id="bar1"></span></div>
+        <div class="small">1.000 reais</div>
 
-      <div class="highlight">
-        ✔️ Simples, prático e sem planilhas.<br>
-        ✔️ Use essa página sempre que precisar.
+        <div class="bar"><span id="bar5"></span></div>
+        <div class="small">5.000 reais</div>
+
+        <div class="bar"><span id="bar10"></span></div>
+        <div class="small">10.000 reais</div>
       </div>
 
     </div>
 
-    <footer>
-      © 2025 • Meu Saldo Real
-    </footer>
   </div>
+
+  <footer>
+    © 2025 • Meu Saldo Real
+  </footer>
+</div>
+
+<script>
+function calcular() {
+  const ganho = parseFloat(document.getElementById("ganho").value) || 0;
+  const sobra = parseFloat(document.getElementById("sobra").value) || 0;
+
+  if (ganho <= 0) {
+    alert("Informe quanto você ganha.");
+    return;
+  }
+
+  let recomendado = sobra > 0 ? sobra : ganho * 0.05;
+  if (recomendado < 50) recomendado = 50;
+
+  const t1 = Math.ceil(1000 / recomendado);
+  const t5 = Math.ceil(5000 / recomendado);
+  const t10 = Math.ceil(10000 / recomendado);
+
+  document.getElementById("guardar").innerText =
+    recomendado.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+
+  document.getElementById("t1").innerText = t1;
+  document.getElementById("t5").innerText = t5;
+  document.getElementById("t10").innerText = t10;
+
+  document.getElementById("bar1").style.width = Math.min((recomendado/1000)*100,100)+"%";
+  document.getElementById("bar5").style.width = Math.min((recomendado/5000)*100,100)+"%";
+  document.getElementById("bar10").style.width = Math.min((recomendado/10000)*100,100)+"%";
+
+  document.getElementById("resultado").style.display = "block";
+}
+</script>
+
 </body>
 </html>
