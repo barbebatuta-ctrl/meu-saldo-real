@@ -1,176 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu Saldo Real — Organize seu dinheiro</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Método Simples para Guardar Dinheiro</title>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      margin: 0;
-      padding: 0;
-      color: #fff;
-    }
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  padding: 20px;
+}
 
-    .container {
-      max-width: 520px;
-      margin: auto;
-      background: #ffffff;
-      color: #333;
-      padding: 25px;
-      border-radius: 12px;
-      margin-top: 30px;
-      margin-bottom: 30px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-    }
+.container {
+  max-width: 480px;
+  margin: auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+}
 
-    h1 {
-      font-size: 26px;
-      color: #111;
-      text-align: center;
-    }
+h1 {
+  font-size: 22px;
+}
 
-    h2 {
-      font-size: 18px;
-      margin-top: 25px;
-      color: #111;
-    }
+label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
 
-    p {
-      font-size: 15px;
-      line-height: 1.6;
-    }
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+}
 
-    .highlight {
-      color: #0b63ff;
-      font-weight: bold;
-    }
+button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  background: #2b7cff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
 
-    label {
-      font-weight: bold;
-      margin-top: 15px;
-      display: block;
-    }
+.resultado {
+  margin-top: 20px;
+  background: #eef3ff;
+  padding: 15px;
+  border-radius: 6px;
+}
 
-    input, select {
-      width: 100%;
-      padding: 12px;
-      margin-top: 6px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 15px;
-    }
+.alerta {
+  margin-top: 10px;
+  color: #c0392b;
+  font-weight: bold;
+}
 
-    button {
-      width: 100%;
-      padding: 15px;
-      background: linear-gradient(90deg, #0b63ff, #00c6ff);
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      font-size: 18px;
-      font-weight: bold;
-      cursor: pointer;
-      margin-top: 20px;
-    }
-
-    button:hover {
-      opacity: 0.95;
-    }
-
-    .resultado {
-      margin-top: 20px;
-      background: #f2f6ff;
-      padding: 15px;
-      border-radius: 8px;
-      color: #111;
-    }
-
-    .alerta {
-      margin-top: 10px;
-      color: #c0392b;
-      font-weight: bold;
-    }
-
-    .proof {
-      background: #eef3ff;
-      border-left: 5px solid #0b63ff;
-      padding: 15px;
-      margin-top: 25px;
-      border-radius: 8px;
-    }
-
-    .cta {
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    .cta p {
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
-
-    .secure {
-      font-size: 13px;
-      color: #555;
-      margin-top: 10px;
-    }
-  </style>
+.cta {
+  margin-top: 25px;
+  text-align: center;
+}
+</style>
 </head>
 
 <body>
 
 <div class="container">
+<h1>Descubra quanto você pode gastar e quanto pode guardar todo mês</h1>
+<p>Não é falta de dinheiro. É falta de método.</p>
 
-  <h1>Descubra quanto dinheiro realmente sobra no seu mês</h1>
+<label>Quanto você ganha por mês?</label>
+<input type="number" id="renda" placeholder="Ex: 2500">
 
-  <p style="text-align:center;">
-    Não é falta de dinheiro.<br>
-    <span class="highlight">É falta de método.</span>
-  </p>
+<label>Quanto são seus gastos fixos?</label>
+<input type="number" id="fixos" placeholder="Aluguel, contas, etc">
 
-  <h2>Simulador rápido</h2>
+<label>Quanto você quer guardar?</label>
+<select id="percentual">
+  <option value="0.05">5%</option>
+  <option value="0.10">10%</option>
+  <option value="0.15">15%</option>
+</select>
 
-  <label>Quanto você ganha por mês?</label>
-  <input type="number" id="renda" placeholder="Ex: 2500">
+<button onclick="calcular()">Calcular agora</button>
 
-  <label>Quanto são seus gastos fixos?</label>
-  <input type="number" id="fixos" placeholder="Aluguel, contas, etc">
+<div class="resultado" id="resultado" style="display:none;"></div>
+<div class="alerta" id="alerta"></div>
 
-  <label>Quanto você quer guardar?</label>
-  <select id="percentual">
-    <option value="0.05">5%</option>
-    <option value="0.10">10%</option>
-    <option value="0.15">15%</option>
-  </select>
-
-  <button onclick="calcular()">Calcular agora</button>
-
-  <div class="resultado" id="resultado" style="display:none;"></div>
-  <div class="alerta" id="alerta"></div>
-
-  <div class="proof">
-    <strong>📌 Pessoas comuns estão usando:</strong>
-    <p>
-      “Finalmente consegui entender meu dinheiro sem planilhas complicadas.”<br>
-      “Em 1 semana já parei de gastar no impulso.”<br>
-      “Simples, direto e funciona.”
-    </p>
-  </div>
-
-  <div class="cta">
-    <p><strong>Tenha acesso completo agora</strong></p>
-
-    <a href="https://sl1nk.com/meusaldoreal2026" target="_blank">
-      <button>Quero organizar meu dinheiro agora</button>
-    </a>
-
-    <p class="secure">
-      🔒 Acesso imediato • Garantia de 7 dias • Pagamento seguro
-    </p>
-  </div>
+<div class="cta">
+  <a href="https://sl1nk.com/meusaldoreal2026" target="_blank">
+    <button>Quero organizar meu dinheiro agora</button>
+  </a>
+</div>
 
 </div>
 
