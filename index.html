@@ -1,253 +1,160 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu Saldo Real</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meu Saldo Real</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #ffffff;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
 
-    .container {
-      max-width: 480px;
-      margin: auto;
-      padding: 28px 18px;
-    }
+.container {
+  max-width: 480px;
+  margin: auto;
+  padding: 28px 18px;
+}
 
-    .card {
-      background: #ffffff;
-      color: #222;
-      border-radius: 18px;
-      padding: 26px;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.35);
-    }
+.card {
+  background: #ffffff;
+  color: #222;
+  border-radius: 18px;
+  padding: 26px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.35);
+}
 
-    h1 {
-      font-size: 26px;
-      text-align: center;
-      margin-bottom: 10px;
-      color: #0f2027;
-      line-height: 1.2;
-    }
+h1 {
+  font-size: 26px;
+  text-align: center;
+  color: #0f2027;
+}
 
-    .subheadline {
-      text-align: center;
-      font-size: 15px;
-      color: #555;
-      margin-bottom: 18px;
-    }
+.sub {
+  text-align: center;
+  font-size: 15px;
+  color: #555;
+  margin: 12px 0 20px;
+}
 
-    .badge {
-      background: #e8f0ff;
-      color: #1a2a4f;
-      text-align: center;
-      padding: 8px;
-      border-radius: 10px;
-      font-size: 13px;
-      margin-bottom: 18px;
-      font-weight: bold;
-    }
+.badge {
+  background: #e8f0ff;
+  color: #1a2a4f;
+  text-align: center;
+  padding: 8px;
+  border-radius: 10px;
+  font-size: 13px;
+  margin-bottom: 18px;
+  font-weight: bold;
+}
 
-    button {
-      width: 100%;
-      padding: 16px;
-      background: linear-gradient(135deg, #00c853, #00a84f);
-      border: none;
-      border-radius: 14px;
-      color: #ffffff;
-      font-size: 17px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-      margin: 14px 0;
-    }
+button {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #00c853, #00a84f);
+  border: none;
+  border-radius: 14px;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 18px 0;
+}
 
-    button:hover {
-      transform: scale(1.03);
-    }
+h2 {
+  font-size: 18px;
+  color: #203a43;
+  margin-top: 24px;
+}
 
-    h2 {
-      font-size: 18px;
-      margin-top: 26px;
-      color: #203a43;
-    }
+ul {
+  padding-left: 18px;
+}
 
-    p {
-      font-size: 15px;
-      line-height: 1.6;
-      margin-top: 10px;
-    }
+ul li {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
 
-    ul {
-      padding-left: 18px;
-      margin-top: 12px;
-    }
+.price {
+  text-align: center;
+  font-size: 24px;
+  margin: 24px 0 6px;
+  font-weight: bold;
+  color: #0f2027;
+}
 
-    ul li {
-      margin-bottom: 9px;
-      font-size: 15px;
-    }
+.guarantee {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  margin-top: 10px;
+}
 
-    .box {
-      background: #f1f5f9;
-      padding: 16px;
-      border-radius: 12px;
-      margin-top: 20px;
-      font-size: 15px;
-      color: #222;
-    }
-
-    .proof {
-      background: #e8f0ff;
-      padding: 15px;
-      border-radius: 12px;
-      margin-top: 20px;
-      font-size: 14px;
-      color: #1a2a4f;
-    }
-
-    .testimonials {
-      margin-top: 20px;
-    }
-
-    .testimonial {
-      background: #fafafa;
-      border-left: 4px solid #00c853;
-      padding: 12px;
-      margin-bottom: 12px;
-      font-size: 14px;
-      color: #333;
-      border-radius: 8px;
-    }
-
-    .price {
-      text-align: center;
-      font-size: 24px;
-      margin: 26px 0 6px;
-      color: #0f2027;
-      font-weight: bold;
-    }
-
-    .urgency {
-      text-align: center;
-      font-size: 14px;
-      color: #c0392b;
-      font-weight: bold;
-      margin-bottom: 14px;
-    }
-
-    .guarantee {
-      text-align: center;
-      font-size: 13px;
-      color: #666;
-      margin-top: 12px;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 12px;
-      color: #ddd;
-      margin-top: 28px;
-    }
-  </style>
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: #ddd;
+  margin-top: 30px;
+}
+</style>
 </head>
 
 <body>
-  <div class="container">
-    <div class="card">
+<div class="container">
+  <div class="card">
 
-      <h1>
-        Pare de chegar no fim do mês sem dinheiro<br>
-        em menos de 5 minutos
-      </h1>
-
-      <div class="subheadline">
-        Descubra exatamente quanto você pode gastar e quanto deve guardar,
-        mesmo que hoje nunca sobre nada.
-      </div>
-
-      <div class="badge">
-        🔥 Método simples • Sem planilhas • 100% no celular
-      </div>
-
-      <!-- CTA TOPO -->
-      <button onclick="window.location.href='https://pay.kiwify.com.br/SEUCODIGO'">
-
-      <h2>📉 Isso parece com você?</h2>
-      <ul>
-        <li>O dinheiro acaba antes do mês terminar</li>
-        <li>Você não sabe para onde seu dinheiro vai</li>
-        <li>Tenta se organizar, mas nunca consegue manter</li>
-        <li>Vive no aperto mesmo trabalhando todo mês</li>
-      </ul>
-
-      <div class="box">
-        ⚠️ O problema não é quanto você ganha.<br>
-        É não saber exatamente quanto pode gastar.
-      </div>
-
-      <h2>💡 O que é o Meu Saldo Real</h2>
-      <p>
-        Um método prático que mostra, em poucos minutos,
-        quanto você pode gastar no mês e quanto deve guardar,
-        sem planilhas, sem contas difíceis e sem complicação.
-      </p>
-
-      <h2>✅ O que você vai conseguir</h2>
-      <ul>
-        <li>✔️ Saber seu limite real de gastos</li>
-        <li>✔️ Começar a guardar dinheiro já no primeiro mês</li>
-        <li>✔️ Parar de se endividar</li>
-        <li>✔️ Ter controle sem estresse</li>
-      </ul>
-
-      <div class="testimonials">
-        <h2>🗣️ Pessoas comuns, resultados reais</h2>
-
-        <div class="testimonial">
-          “Nunca consegui me organizar. Em 10 minutos já sabia exatamente
-          quanto podia gastar por semana.” – Carlos M.
-        </div>
-
-        <div class="testimonial">
-          “Simples demais. Finalmente parei de gastar sem controle.” – Ana R.
-        </div>
-
-        <div class="testimonial">
-          “Achei que ganhava pouco, mas o problema era falta de método.” – João P.
-        </div>
-      </div>
-
-      <div class="proof">
-        📊 Métodos simples de controle financeiro são os que mais funcionam
-        para quem nunca conseguiu seguir planilhas complicadas.
-      </div>
-
-      <div class="price">
-        Apenas R$ 19,90
-      </div>
-
-      <div class="urgency">
-        ⚠️ Oferta de lançamento • Pode sair do ar a qualquer momento
-      </div>
-
-      <!-- CTA FINAL -->
-      <button onclick="window.location.href='https://pay.kiwify.com.br/SEUCODIGO'">
-
-      <div class="guarantee">
-        🔒 Pagamento 100% seguro • Garantia incondicional de 7 dias
-      </div>
-
+    <h1>Pare de chegar no fim do mês sem dinheiro</h1>
+    <div class="sub">
+      Descubra quanto pode gastar e quanto deve guardar,
+      mesmo que hoje nunca sobre nada.
     </div>
 
-    <footer>
-      © 2025 • Meu Saldo Real
-    </footer>
+    <div class="badge">
+      🔥 Sem planilhas • Simples • 100% no celular
+    </div>
+
+    <!-- CTA TOPO -->
+    <button onclick="window.location.href='https://sl1nk.com/meusaldoreal2026'">
+      SIM, QUERO ORGANIZAR MEU DINHEIRO
+    </button>
+
+    <h2>Isso parece com você?</h2>
+    <ul>
+      <li>O dinheiro acaba antes do mês terminar</li>
+      <li>Você não sabe para onde seu dinheiro vai</li>
+      <li>Tenta se organizar, mas nunca consegue</li>
+      <li>Vive no aperto todo mês</li>
+    </ul>
+
+    <h2>O que você vai conseguir</h2>
+    <ul>
+      <li>✔️ Saber exatamente quanto pode gastar</li>
+      <li>✔️ Guardar dinheiro já no primeiro mês</li>
+      <li>✔️ Parar de se endividar</li>
+      <li>✔️ Ter controle sem estresse</li>
+    </ul>
+
+    <div class="price">
+      Apenas R$ 19,90
+    </div>
+
+    <!-- CTA FINAL -->
+    <button onclick="window.location.href='https://sl1nk.com/meusaldoreal2026'">
+      SIM, QUERO ACESSAR AGORA
+    </button>
+
+    <div class="guarantee">
+      🔒 Pagamento seguro • Garantia de 7 dias
+    </div>
+
   </div>
+
+  <footer>
+    © 2025 • Meu Saldo Real
+  </footer>
+</div>
 </body>
 </html>
