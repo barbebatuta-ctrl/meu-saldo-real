@@ -67,3 +67,15 @@ Acompanhe seu progresso real abaixo. A cada mês, preencha seu patrimônio acumu
 
 ---
 *Este é um produto digital de acesso exclusivo para clientes. A reprodução não autorizada é proibida.*
+## 📥 Baixe sua Calculadora Auxiliar
+
+Para facilitar ainda mais, você pode usar nossa calculadora em formato CSV:
+
+1. Clique no arquivo `calculadora-msr.csv` aqui no GitHub.
+2. Clique no botão **"Download raw file"** (ícone de baixar).
+3. Abra no Excel ou Google Sheets.
+
+**Como preencher:**
+* Insira seus valores na coluna **Valor (R$)**.
+* No campo **SALDO REAL MENSAL**, use a fórmula: `=B2-B3-B4`
+* No campo **SALDO REAL SEMANAL**, use a fórmula: `=B5/4`
