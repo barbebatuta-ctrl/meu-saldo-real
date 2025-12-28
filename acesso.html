@@ -2,34 +2,33 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Meu Saldo Real | Área de Membros</title>
+<title>Meu Saldo Real • Acompanhamento</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body {
   font-family: Arial, sans-serif;
-  background: #0f172a;
+  background: #020617;
   color: #e5e7eb;
-  margin: 0;
   padding: 20px;
 }
 .container {
-  max-width: 520px;
+  max-width: 600px;
   margin: auto;
+}
+.card {
   background: #020617;
-  padding: 24px;
+  border: 1px solid #1e293b;
   border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 h1, h2 {
   color: #38bdf8;
 }
-p {
-  line-height: 1.5;
-}
 label {
   display: block;
-  margin-top: 14px;
-  font-weight: bold;
+  margin-top: 12px;
 }
 input, select {
   width: 100%;
@@ -39,32 +38,17 @@ input, select {
   border: none;
 }
 button {
+  margin-top: 16px;
   width: 100%;
-  margin-top: 20px;
   padding: 14px;
-  font-size: 16px;
   background: #38bdf8;
   color: #020617;
   border: none;
   border-radius: 8px;
   font-weight: bold;
 }
-.resultado {
-  margin-top: 24px;
-  background: #020617;
-  padding: 16px;
-  border-radius: 8px;
-  border: 1px solid #1e293b;
-}
-canvas {
-  margin-top: 20px;
-}
-.box {
-  background:#020617;
-  border:1px solid #1e293b;
-  padding:14px;
-  border-radius:8px;
-  margin-top:14px;
+small {
+  color: #94a3b8;
 }
 </style>
 </head>
@@ -73,102 +57,95 @@ canvas {
 
 <div class="container">
 
-<h1>Bem-vindo ao Meu Saldo Real</h1>
+<div class="card">
+<h1>Meu Saldo Real</h1>
+<p>Este sistema foi feito para acompanhar sua vida financeira por anos.<br>
+Não é sobre perfeição. É sobre constância.</p>
+</div>
 
-<p>Obrigado por confiar em você e investir neste método.</p>
+<div class="card">
+<h2>Registrar este mês</h2>
 
-<p>
-Aqui você não vai aprender termos difíceis.<br>
-Você só vai descobrir <strong>quanto pode guardar</strong> e <strong>em quanto tempo sua vida começa a mudar</strong>.
-</p>
+<label>Mês de referência</label>
+<input type="month" id="mes">
 
-<hr>
+<label>Quanto dinheiro entrou?</label>
+<input type="number" id="entrada">
 
-<h2>1️⃣ Vamos entender sua realidade</h2>
+<label>Quanto dinheiro saiu?</label>
+<input type="number" id="saida">
 
-<label>Quanto dinheiro entra por mês?</label>
-<input type="number" id="renda" placeholder="Ex: 2500">
+<label>Qual seu grande objetivo financeiro?</label>
+<input type="number" id="meta" placeholder="Ex: 50000">
 
-<label>Quanto você gasta com coisas obrigatórias?  
-<br><small>(aluguel, contas, mercado, transporte)</small></label>
-<input type="number" id="gastos" placeholder="Ex: 1800">
+<button onclick="salvarMes()">Salvar mês</button>
+</div>
 
-<label>Qual seu objetivo agora?</label>
-<select id="objetivo">
-  <option value="1000">Guardar R$ 1.000</option>
-  <option value="5000">Guardar R$ 5.000</option>
-  <option value="10000">Guardar R$ 10.000</option>
-</select>
+<div class="card">
+<h2>Resumo geral</h2>
+<div id="resumo"></div>
+</div>
 
-<button onclick="calcular()">Ver meu saldo real</button>
-
-<div class="resultado" id="resultado" style="display:none;"></div>
-
-<canvas id="grafico" width="400" height="200"></canvas>
+<div class="card">
+<h2>Evolução ao longo do tempo</h2>
+<canvas id="grafico"></canvas>
+</div>
 
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
-function calcular() {
-  const renda = Number(document.getElementById("renda").value);
-  const gastos = Number(document.getElementById("gastos").value);
-  const objetivo = Number(document.getElementById("objetivo").value);
+let dados = JSON.parse(localStorage.getItem("saldoReal")) || [];
 
-  if (!renda || !gastos) {
-    alert("Preencha os valores para continuar");
+function salvarMes() {
+  const mes = document.getElementById("mes").value;
+  const entrada = Number(document.getElementById("entrada").value);
+  const saida = Number(document.getElementById("saida").value);
+  const meta = Number(document.getElementById("meta").value);
+
+  if (!mes || !entrada || !saida || !meta) {
+    alert("Preencha todos os campos");
     return;
   }
 
-  const sobra = renda - gastos;
-  let recomendacaoPercentual = 0.1;
+  dados.push({ mes, entrada, saida, saldo: entrada - saida, meta });
+  localStorage.setItem("saldoReal", JSON.stringify(dados));
 
-  if (sobra < renda * 0.1) recomendacaoPercentual = 0.05;
-  if (sobra > renda * 0.3) recomendacaoPercentual = 0.15;
+  atualizar();
+}
 
-  const guardar = renda * recomendacaoPercentual;
-  const meses = Math.ceil(objetivo / guardar);
+function atualizar() {
+  if (dados.length === 0) return;
 
-  document.getElementById("resultado").style.display = "block";
-  document.getElementById("resultado").innerHTML = `
-    <div class="box">
-      <strong>✔ Recomendação automática</strong><br>
-      Com sua realidade atual, o ideal é guardar cerca de <strong>R$ ${guardar.toFixed(2)}</strong> por mês.
-    </div>
+  const totalGuardado = dados.reduce((acc, d) => acc + d.saldo, 0);
+  const ultimaMeta = dados[dados.length - 1].meta;
+  const mediaMensal = totalGuardado / dados.length;
+  const mesesRestantes = Math.ceil((ultimaMeta - totalGuardado) / mediaMensal);
 
-    <div class="box">
-      <strong>✔ Você pode gastar</strong><br>
-      Aproximadamente <strong>R$ ${(renda - gastos - guardar).toFixed(2)}</strong> livres no mês.
-    </div>
-
-    <div class="box">
-      <strong>✔ Tempo para atingir seu objetivo</strong><br>
-      Cerca de <strong>${meses} meses</strong>.
-    </div>
-
-    <div class="box">
-      <strong>Mensagem importante:</strong><br>
-      Se hoje parece pouco, lembre-se: constância vence esforço.
-    </div>
+  document.getElementById("resumo").innerHTML = `
+    <p><strong>Total acumulado:</strong> R$ ${totalGuardado.toFixed(2)}</p>
+    <p><strong>Média mensal:</strong> R$ ${mediaMensal.toFixed(2)}</p>
+    <p><strong>Tempo estimado para atingir meta:</strong> ${mesesRestantes} meses</p>
   `;
 
-  const ctx = document.getElementById('grafico').getContext('2d');
-  if (window.graficoSaldo) window.graficoSaldo.destroy();
+  const ctx = document.getElementById("grafico").getContext("2d");
+  if (window.grafico) window.grafico.destroy();
 
-  window.graficoSaldo = new Chart(ctx, {
-    type: 'bar',
+  window.grafico = new Chart(ctx, {
+    type: 'line',
     data: {
-      labels: ['Guardar por mês', 'Objetivo final'],
+      labels: dados.map(d => d.mes),
       datasets: [{
-        data: [guardar, objetivo]
+        label: 'Evolução do saldo',
+        data: dados.map(d => d.saldo),
+        fill: false
       }]
-    },
-    options: {
-      plugins: { legend: { display: false } }
     }
   });
 }
+
+atualizar();
 </script>
 
 </body>
