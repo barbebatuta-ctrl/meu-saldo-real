@@ -1,4 +1,20 @@
-# 📱 Meu Saldo Real: Seu Navegador Financeiro
+🚀 Boas-vindas: Meu Saldo Real
+
+Parabéns! Você acaba de dar o passo mais inteligente para sua liberdade financeira.
+
+A partir de agora, você faz parte do grupo que decidiu abandonar a ansiedade das planilhas complexas em favor da clareza total. O Meu Saldo Real não é apenas um conjunto de arquivos; é o seu novo GPS financeiro.
+
+O que você encontra aqui:
+
+Seu Mapa da Paz: O guia prático para dominar seu dinheiro em minutos.
+
+Sua Calculadora de Rota: O arquivo CSV pronto para uso imediato.
+
+Seu Histórico de Evolução: O método para ver seu patrimônio crescer mês a mês.
+
+Como começar: Leia o arquivo README.md abaixo. Ele contém o passo a passo exato para você descobrir seu Saldo Real ainda hoje. Lembre-se: o controle financeiro não deve ser um esforço, deve ser uma constância.
+
+Sua jornada de clareza começa agora! 📱 Meu Saldo Real: Seu Navegador Financeiro
 
 > **"Saiba exatamente quanto pode gastar, guardar e evoluir — sem planilhas e direto do celular."**
 
