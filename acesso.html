@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acesso – Meu Saldo Real</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+    }
+
+    .container {
+      max-width: 520px;
+      margin: auto;
+      padding: 28px 18px;
+    }
+
+    .card {
+      background: #ffffff;
+      color: #222;
+      border-radius: 18px;
+      padding: 26px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.35);
+    }
+
+    h1 {
+      font-size: 26px;
+      text-align: center;
+      color: #0f2027;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 20px;
+      color: #203a43;
+      margin-top: 26px;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.6;
+      margin-top: 10px;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin-top: 12px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    .highlight {
+      background: #e8f0ff;
+      padding: 14px;
+      border-radius: 12px;
+      margin-top: 18px;
+      font-size: 15px;
+      color: #1a2a4f;
+    }
+
+    .calc {
+      background: #f1f5f9;
+      padding: 16px;
+      border-radius: 12px;
+      margin-top: 18px;
+      color: #222;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, #00c853, #00a84f);
+      border: none;
+      border-radius: 12px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .result {
+      margin-top: 14px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      color: #0f2027;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #ddd;
+      margin-top: 28px;
+    }
+  </style>
+
+  <script>
+    function calcularSaldo() {
+      const renda = Number(document.getElementById("renda").value);
+      const gastos = Number(document.getElementById("gastos").value);
+      const guardar = Number(document.getElementById("guardar").value);
+
+      const saldo = renda - gastos - guardar;
+
+      document.getElementById("resultado").innerText =
+        "Seu Saldo Real para gastar é: R$ " + saldo.toFixed(2);
+    }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+
+      <h1>✅ Acesso Liberado</h1>
+      <p style="text-align:center;">
+        Bem-vindo ao <strong>Método Meu Saldo Real</strong>.<br>
+        Em poucos minutos você vai saber exatamente quanto pode gastar.
+      </p>
+
+      <h2>🔹 PASSO 1 – Sua renda mensal</h2>
+      <p>
+        Some todo dinheiro que entra no mês:
+      </p>
+      <ul>
+        <li>Salário</li>
+        <li>Renda extra</li>
+        <li>Qualquer valor fixo</li>
+      </ul>
+
+      <h2>🔹 PASSO 2 – Seus gastos essenciais</h2>
+      <p>
+        Liste apenas o que é obrigatório:
+      </p>
+      <ul>
+        <li>Aluguel / contas</li>
+        <li>Comida</li>
+        <li>Transporte</li>
+        <li>Dívidas (se houver)</li>
+      </ul>
+
+      <h2>🔹 PASSO 3 – Quanto você vai guardar</h2>
+      <p>
+        Mesmo que seja pouco. Guardar vem <strong>antes</strong> de gastar.
+      </p>
+
+      <div class="highlight">
+        💡 Fórmula do método:<br>
+        <strong>Saldo Real = Renda – Gastos – Valor Guardado</strong>
+      </div>
+
+      <h2>📊 Calculadora Meu Saldo Real</h2>
+      <div class="calc">
+        <label>Renda mensal (R$)</label>
+        <input id="renda" type="number" placeholder="Ex: 2500">
+
+        <label>Gastos fixos (R$)</label>
+        <input id="gastos" type="number" placeholder="Ex: 1600">
+
+        <label>Valor para guardar (R$)</label>
+        <input id="guardar" type="number" placeholder="Ex: 300">
+
+        <button onclick="calcularSaldo()">CALCULAR MEU SALDO REAL</button>
+
+        <div class="result" id="resultado"></div>
+      </div>
+
+      <h2>📅 Como usar no dia a dia</h2>
+      <ul>
+        <li>Divida seu saldo por 4 → gasto semanal</li>
+        <li>Evite gastar tudo em poucos dias</li>
+        <li>Se estourar um dia, compense no próximo</li>
+      </ul>
+
+      <div class="highlight">
+        ✔️ Simples, prático e sem planilhas.<br>
+        ✔️ Use essa página sempre que precisar.
+      </div>
+
+    </div>
+
+    <footer>
+      © 2025 • Meu Saldo Real
+    </footer>
+  </div>
+</body>
+</html>
